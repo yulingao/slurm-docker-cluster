@@ -43,7 +43,7 @@ services:
       - "slurmdbd"
 
   c1:
-    image: slurm-docker-cluster:19.05.1
+    image: slurm-docker-cluster:19.05.2
     command: ["slurmd"]
     hostname: c1
     container_name: c1
