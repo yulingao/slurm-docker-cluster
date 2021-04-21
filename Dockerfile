@@ -49,17 +49,17 @@ RUN set -ex \
     && chmod +x /usr/local/bin/gosu \
     && gosu nobody true
     
-#RUN set -x\
-#    && wget http://www.mpich.org/static/downloads/3.2.1/mpich-3.2.1.tar.gz \
-#    && tar xzf mpich-3.2.1.tar.gz \
-#    && mkdir /mpich-install \
-#    && pushd mpich-3.2.1 \
-#    && ./configure --prefix=/mpich-install \
-#    && make && make install \
-#    && echo PATH=/mpich-install/bin:$PATH >> ~/.bashrc \
-#    && source ~/.bashrc \
-#    && popd \
-#    && rm -rf mpich-3.2.1 mpich-3.2.1.tar.gz
+RUN set -x\
+    && wget http://www.mpich.org/static/downloads/3.2.1/mpich-3.2.1.tar.gz \
+    && tar xzf mpich-3.2.1.tar.gz \
+    && mkdir /mpich-install \
+    && pushd mpich-3.2.1 \
+    && ./configure --prefix=/mpich-install \
+    && make && make install \
+    && echo PATH=/mpich-install/bin:$PATH >> ~/.bashrc \
+    && source ~/.bashrc \
+    && popd \
+    && rm -rf mpich-3.2.1 mpich-3.2.1.tar.gz
 
 RUN set -x \
     && git clone https://github.com/yulingao/slurm.git \
