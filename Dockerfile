@@ -34,6 +34,7 @@ RUN set -ex \
        psmisc \
        bash-completion \
        vim-enhanced \
+    && yum install -y gcc-gfortran git
     && yum clean all \
     && rm -rf /var/cache/yum
 
@@ -48,11 +49,22 @@ RUN set -ex \
     && rm -rf "${GNUPGHOME}" /usr/local/bin/gosu.asc \
     && chmod +x /usr/local/bin/gosu \
     && gosu nobody true
+    
+RUN set -x\
+    && wget http://www.mpich.org/static/downloads/3.2.1/mpich-3.2.1.tar.gz \
+    && tar xzf mpich-3.2.1.tar.gz \
+    && mkdir /mpich-install \
+    && pushd mpich-3.2.1 \
+    && ./configure --prefix=/mpich-install \
+    && make && make install \
+    && echo PATH=/mpich-install/bin:$PATH >> ~/.bashrc \
+    && source ~/.bashrc \
+    && popd \
+    && rm -rf mpich-3.2.1 mpich-3.2.1.tar.gz
 
 RUN set -x \
-    && git clone https://github.com/SchedMD/slurm.git \
+    && git clone https://github.com/yulingao/slurm.git \
     && pushd slurm \
-    && git checkout tags/$SLURM_TAG \
     && ./configure --enable-debug --prefix=/usr --sysconfdir=/etc/slurm \
         --with-mysql_config=/usr/bin  --libdir=/usr/lib64 \
     && make install \
