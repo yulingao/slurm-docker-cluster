@@ -34,7 +34,7 @@ RUN set -ex \
        psmisc \
        bash-completion \
        vim-enhanced \
-    && yum install -y gcc-gfortran git &&
+    && yum install -y gcc-gfortran git \
     && yum clean all \
     && rm -rf /var/cache/yum
 
