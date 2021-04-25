@@ -27,15 +27,9 @@ The compose file will create the following named volumes:
 Build the image locally:
 
 ```console
-docker build -t slurm-docker-cluster:19.05.2 .
+docker build -t centos_slurm:1.0 .
 ```
 
-Build a different version of Slurm using Docker build args and the Slurm Git
-tag:
-
-```console
-docker build --build-arg SLURM_TAG="slurm-19-05-2-1" -t slurm-docker-cluster:19.05.2 .
-```
 
 > Note: You will need to update the container image version in
 > [docker-compose.yml](docker-compose.yml).
