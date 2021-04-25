@@ -71,6 +71,7 @@ services:
       - "6818"
     depends_on:
       - "slurmctld"
+      
   c3:
     image: docker-slurm:1.0
     command: ["slurmd"]
@@ -85,6 +86,14 @@ services:
       - "6818"
     depends_on:
       - "slurmctld"
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 3G
+        reservations:
+          cpus: '0.1'
+          memory: 200M
 
 volumes:
   etc_munge:
