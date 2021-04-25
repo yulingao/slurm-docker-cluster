@@ -27,7 +27,7 @@ The compose file will create the following named volumes:
 Build the image locally:
 
 ```console
-docker build -t centos_slurm:1.0 .
+docker build -t centos-slurm:1.0 .
 ```
 
 
