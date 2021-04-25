@@ -14,7 +14,7 @@ services:
       - var_lib_mysql:/var/lib/mysql
 
   slurmdbd:
-    image: centos-slurm:1.0
+    image: docker-slurm:1.0
     command: ["slurmdbd"]
     container_name: slurmdbd
     hostname: slurmdbd
@@ -28,7 +28,7 @@ services:
       - mysql
 
   slurmctld:
-    image: centos-slurm:1.0
+    image: docker-slurm:1.0
     command: ["slurmctld"]
     container_name: slurmctld
     hostname: slurmctld
@@ -43,7 +43,7 @@ services:
       - "slurmdbd"
 
   c1:
-    image: centos-slurm:1.0
+    image: docker-slurm:1.0
     command: ["slurmd"]
     hostname: c1
     container_name: c1
@@ -72,7 +72,7 @@ services:
     depends_on:
       - "slurmctld"
   c3:
-    image: centos-slurm:1.0
+    image: docker-slurm:1.0
     command: ["slurmd"]
     hostname: c3
     container_name: c3
