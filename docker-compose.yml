@@ -35,7 +35,7 @@ services:
     volumes:
       - etc_munge:/etc/munge
       - etc_slurm:/etc/slurm
-      - slurm_jobdir:/data
+      - slurm_jobdir:/nfs
       - var_log_slurm:/var/log/slurm
     expose:
       - "6817"
@@ -50,7 +50,7 @@ services:
     volumes:
       - etc_munge:/etc/munge
       - etc_slurm:/etc/slurm
-      - slurm_jobdir:/data
+      - slurm_jobdir:/nfs
       - var_log_slurm:/var/log/slurm
     expose:
       - "6818"
@@ -65,7 +65,7 @@ services:
     volumes:
       - etc_munge:/etc/munge
       - etc_slurm:/etc/slurm
-      - slurm_jobdir:/data
+      - slurm_jobdir:/nfs
       - var_log_slurm:/var/log/slurm
     expose:
       - "6818"
@@ -80,7 +80,7 @@ services:
     volumes:
       - etc_munge:/etc/munge
       - etc_slurm:/etc/slurm
-      - slurm_jobdir:/data
+      - slurm_jobdir:/nfs
       - var_log_slurm:/var/log/slurm
     expose:
       - "6818"
