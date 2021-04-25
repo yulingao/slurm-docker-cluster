@@ -62,7 +62,7 @@ RUN set -x\
     && rm -rf mpich-3.2.1 mpich-3.2.1.tar.gz
 
 RUN set -x \
-    && git clone git@github.com:yulingao/slurm.git \
+    && git clone https://github.com/yulingao/slurm.git \
     && pushd slurm \
     && ./configure --enable-debug --prefix=/usr --sysconfdir=/etc/slurm \
         --with-mysql_config=/usr/bin  --libdir=/usr/lib64 \
