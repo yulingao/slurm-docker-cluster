@@ -58,7 +58,7 @@ services:
       - "slurmctld"
 
   c2:
-    image: centos-slurm:1.0
+    image: docker-slurm:1.0
     command: ["slurmd"]
     hostname: c2
     container_name: c2
