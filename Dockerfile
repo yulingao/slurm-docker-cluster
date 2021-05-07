@@ -7,6 +7,7 @@ LABEL org.opencontainers.image.source="https://github.com/yulingao/slurm-docker-
       maintainer="gaoyulin"
 
 
+
 COPY slurm.conf /etc/slurm/slurm.conf
 COPY slurmdbd.conf /etc/slurm/slurmdbd.conf
 COPY cgroup.conf /etc/slurm/cgroup.conf
