@@ -1,4 +1,4 @@
-FROM centos-slurm
+FROM docker_slurm_5_7
 
 LABEL org.opencontainers.image.source="https://github.com/yulingao/slurm-docker-cluster" \
       org.opencontainers.image.title="slurm-docker-cluster" \
