@@ -13,7 +13,7 @@ The compose file will create the following named volumes:
 Build the image locally:
 
 ```console
-docker build -t docker-slurm .
+docker build -t docker-slurm-5-9 .
 ```
 
 
