@@ -90,6 +90,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN
       
   c3:
     image: docker-slurm
@@ -113,6 +115,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c4:
     image: docker-slurm
@@ -136,6 +140,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c5:
     image: docker-slurm
@@ -159,6 +165,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c6:
     image: docker-slurm
@@ -182,6 +190,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c7:
     image: docker-slurm
@@ -205,6 +215,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c8:
     image: docker-slurm
@@ -228,6 +240,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c9:
     image: docker-slurm
@@ -251,6 +265,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c10:
     image: docker-slurm
@@ -274,6 +290,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c11:
     image: docker-slurm
@@ -297,6 +315,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c12:
     image: docker-slurm
@@ -320,6 +340,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c13:
     image: docker-slurm
@@ -343,6 +365,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c14:
     image: docker-slurm
@@ -366,6 +390,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c15:
     image: docker-slurm
@@ -389,6 +415,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
   c16:
     image: docker-slurm
@@ -412,6 +440,8 @@ services:
         reservations:
           cpus: '0.1'
           memory: 200M
+    cap_add:
+        - NET_ADMIN          
 
 
 volumes:
